@@ -22,13 +22,17 @@ services:
       - ./LinkScribe-Blueprint/input/credenciales/private_jwt.pem:/opt/metadata_img_dei_api/input/credenciales/private_jwt.pem:ro
       - ./LinkScribe-Blueprint/input/credenciales/public_jwt.pem:/opt/metadata_img_dei_api/input/credenciales/public_jwt.pem:ro
 
-  mongo:
-    image: mongo
+  mongodb:
+    image: mongo:6-jammy
     ports:
-      - "27017:27017"
+      - '27017:27017'
+    volumes:
+      - dbdata6:/data/db
     networks:
       - linkscribe-blueprint-docker_default
-
+volumes:
+  dbdata6:
+    
 networks:
   linkscribe-blueprint-docker_default:
     external: true
