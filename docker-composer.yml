@@ -30,6 +30,7 @@ services:
       - dbdata6:/data/db
     networks:
       - linkscribe-blueprint-docker_default
+
 volumes:
   dbdata6:
     
