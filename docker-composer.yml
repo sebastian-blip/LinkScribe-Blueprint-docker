@@ -8,7 +8,6 @@ services:
       dockerfile: Dockerfile
     environment:
       - TZ=America/Bogota
-      - DB_URL=mongodb://mongodb/myTestDB
     logging:
       driver: "journald"
     ports:
@@ -16,8 +15,8 @@ services:
     depends_on:
       - mongodb
     volumes:
-      - ./LinkScribe-Blueprint/input/credenciales/private_jwt.pem:/opt/metadata_img_dei_api/input/credenciales/private_jwt.pem:ro
-      - ./LinkScribe-Blueprint/input/credenciales/public_jwt.pem:/opt/metadata_img_dei_api/input/credenciales/public_jwt.pem:ro
+      - ./LinkScribe-Blueprint/input/credenciales/private_jwt.pem:/opt/LinkScribe-Blueprint/input/credenciales/private_jwt.pem:ro
+      - ./LinkScribe-Blueprint/input/credenciales/public_jwt.pem:/opt/LinkScribe-Blueprint/input/credenciales/public_jwt.pem:ro
 
   mongodb:
     image: mongo:6-jammy
