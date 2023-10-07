@@ -15,8 +15,6 @@ services:
       - 8000:8000
     depends_on:
       - mongodb
-    command: uvicorn main:app --host 0.0.0.0 --proxy-headers --port 8000
-
     volumes:
       - ./LinkScribe-Blueprint/input/credenciales/private_jwt.pem:/opt/metadata_img_dei_api/input/credenciales/private_jwt.pem:ro
       - ./LinkScribe-Blueprint/input/credenciales/public_jwt.pem:/opt/metadata_img_dei_api/input/credenciales/public_jwt.pem:ro
