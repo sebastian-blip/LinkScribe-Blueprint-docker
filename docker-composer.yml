@@ -1,8 +1,8 @@
 services:
 
   linkscribe-blueprint:
-    container_name: metadata-img-dei
-    image: blue/LinkScribe-Blueprint:dev
+    container_name: linkscribe-blueprint
+    image: blue/linkscribe-blueprint:dev
     build:
       context: ./LinkScribe-Blueprint
       dockerfile: Dockerfile
