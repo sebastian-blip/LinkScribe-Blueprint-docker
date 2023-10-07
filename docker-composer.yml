@@ -4,7 +4,7 @@ services:
     container_name: linkscribe-blueprint
     image: blue/linkscribe-blueprint:dev
     build:
-      context: ./LinkScribe-Blueprint
+      context: ./linkscribe-blueprint
       dockerfile: Dockerfile
     environment:
       - TZ=America/Bogota
