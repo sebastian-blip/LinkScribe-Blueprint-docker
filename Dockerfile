@@ -7,3 +7,4 @@ RUN git clone -b master https://github.com/sebastian-blip/LinkScribe-Blueprint.g
 
 WORKDIR LinkScribe-Blueprint
 RUN pip install -r requirements.txt
+

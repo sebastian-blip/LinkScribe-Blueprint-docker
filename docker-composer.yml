@@ -8,6 +8,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - TZ=America/Bogota
+      - DB_URL=mongodb://db/myTestDB
     logging:
       driver: "journald"
     ports:
@@ -34,6 +35,3 @@ services:
 volumes:
   dbdata6:
     
-networks:
-  linkscribe-blueprint-docker_default:
-    external: true
