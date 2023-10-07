@@ -12,6 +12,8 @@ services:
       driver: "journald"
     ports:
       - 8000:8000
+    networks:
+     - linkscribe-blueprint-docker_default
     depends_on:
       - mongo
     command: uvicorn main:app --host 0.0.0.0 --proxy-headers --port 8000
@@ -24,5 +26,9 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+    networks:
+      - linkscribe-blueprint-docker_default
 
-
+networks:
+  linkscribe-blueprint-docker_default:
+    external: true
