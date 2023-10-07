@@ -1,6 +1,6 @@
 services:
 
-  LinkScribe-Blueprint:
+  linkscribe-blueprint:
     container_name: metadata-img-dei
     image: blue/LinkScribe-Blueprint:dev
     build:
